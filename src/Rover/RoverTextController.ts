@@ -1,6 +1,6 @@
 import Rover from "./Rover";
 
-class RoverController{
+class RoverTextController {
 
     private rover;
     constructor(rover: Rover) {
@@ -25,4 +25,4 @@ class RoverController{
     }
 }
 
-export default RoverController;
+export default RoverTextController;

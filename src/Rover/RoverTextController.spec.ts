@@ -1,15 +1,15 @@
 import Rover from "./Rover";
-import RoverController from "./RoverController";
+import RoverTextController from "./RoverTextController";
 
 describe('Test the rover controller', () => {
-        let roverController: RoverController;
+        let roverController: RoverTextController;
         let testRover: Rover;
         beforeAll(() => {
             jest.spyOn(Rover.prototype, 'turnLeft');
             jest.spyOn(Rover.prototype, 'turnRight');
             jest.spyOn(Rover.prototype, 'moveForward');
             testRover = new Rover({maxWidth: 5, maxHeight: 5});
-           roverController = new RoverController(testRover)
+           roverController = new RoverTextController(testRover)
         });
         afterEach(() =>{
             jest.resetAllMocks();
