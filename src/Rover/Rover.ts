@@ -17,8 +17,8 @@ class Rover{
     }
 
     turnLeft(){
-        // As % is a remainder operator not a modulo operator we have to add the total first otherwise
-        // you get can get a negative number being returned
+        // As the cardinal direct can be zero if we mod -1 we get -1 so we have to add
+        // the total number of directions first to prevent this: (0 - 1) % 4 = -1 not the 3 we expect.
         this.cardinalDirection = (((this.cardinalDirection - 1) + 4) % 4);
     }
 }
