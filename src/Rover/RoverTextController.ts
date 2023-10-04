@@ -1,14 +1,14 @@
-import Rover from "./Rover";
+import RoverInterface from './RoverInterface';
 
-class RoverTextController {
+class RoverTextController implements RoverControllerInterface{
 
     private rover;
-    constructor(rover: Rover) {
+    constructor(rover: RoverInterface) {
         this.rover = rover;
     }
 
-    moveRoverByInput(userInput: string){
-        let inputSteps = userInput.split('');
+    moveRover(controlInput: string){
+        let inputSteps = controlInput.split('');
         inputSteps.forEach((step) => {
             switch (step) {
                 case 'L':
