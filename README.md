@@ -10,6 +10,12 @@ Run `npm build`
 
 Run `npm start`
 
+##TESTING
+
+To run all the unit tests run `npm run test`
+
+## USING THE APP
+
 When running you will be asked for 2 inputs: 
 
 > How big is the plateau?
