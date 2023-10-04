@@ -1,5 +1,5 @@
 import RoverVector from "./RoverVector";
-import {CardinalDirections} from "./CardinalDIrections";
+import {CardinalDirectionsEnum} from "./CardinalDirectionsEnum";
 import {Plateau} from "./Plateau";
 
 class Rover{
@@ -15,7 +15,7 @@ class Rover{
     }
 
     getRoverVector(): RoverVector{
-        return {x: this.x, y: this.y, cardinalDirection: CardinalDirections[this.cardinalDirection]}
+        return {x: this.x, y: this.y, cardinalDirection: CardinalDirectionsEnum[this.cardinalDirection]}
     }
 
     turnLeft(){
@@ -29,16 +29,16 @@ class Rover{
     }
 
     moveForward(){
-        if(this.cardinalDirection === CardinalDirections.North && this.y !== this.plateau.maxHeight){
+        if(this.cardinalDirection === CardinalDirectionsEnum.North && this.y !== this.plateau.maxHeight){
             this.y++;
         }
-        else if(this.cardinalDirection === CardinalDirections.South && this.y !== 1){
+        else if(this.cardinalDirection === CardinalDirectionsEnum.South && this.y !== 1){
             this.y--;
         }
-        else if(this.cardinalDirection === CardinalDirections.East && this.x !== this.plateau.maxWidth){
+        else if(this.cardinalDirection === CardinalDirectionsEnum.East && this.x !== this.plateau.maxWidth){
             this.x++;
         }
-        else if(this.cardinalDirection === CardinalDirections.West && this.x !== 1){
+        else if(this.cardinalDirection === CardinalDirectionsEnum.West && this.x !== 1){
             this.x--;
         }
     }
