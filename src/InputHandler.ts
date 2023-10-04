@@ -1,8 +1,8 @@
 import process from 'process';
 import Plateau from './MarsRover/Plateau';
 import MarsRover from './MarsRover/MarsRover';
-import RoverTextController from './MarsRover/RoverCommander';
 import {RoverVector} from './MarsRover/@types';
+import RoverCommander from './MarsRover/RoverCommander';
 
 
 export default class InputHandler{
@@ -15,7 +15,7 @@ export default class InputHandler{
         const marsRover = new MarsRover(marsPlateau);
 
         const roverInstructions = await this.asyncReadline('What are the instructions for the rover?');
-        const roverController = new RoverTextController(marsRover);
+        const roverController = new RoverCommander(marsRover);
         roverController.moveRover(roverInstructions);
         return marsRover.getRoverVector();
     }

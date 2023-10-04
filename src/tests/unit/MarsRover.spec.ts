@@ -130,6 +130,17 @@ describe('Rover tests', () => {
                 testRover.moveForward();
             }
             expect(testRover.getRoverVector()).toEqual({x: 6, y: 6, cardinalDirection: 'East'})
+        });
+        it(`On a 4x2 plateay move FFFRFFRFFLF ending at 6,6, West`, () => {
+            const testRover = new MarsRover(new Plateau(6, 6));
+            for(let i = 0; i < 6; i++){
+                testRover.moveForward();
+            }
+            testRover.turnRight();
+            for(let i = 0; i < 6; i++){
+                testRover.moveForward();
+            }
+            expect(testRover.getRoverVector()).toEqual({x: 3, y: 1, cardinalDirection: 'West'})
         })
     })
 

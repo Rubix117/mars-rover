@@ -30,13 +30,13 @@ class MarsRover implements RoverInterface{
     }
 
     moveForward(){
-        if(this.cardinalDirection === CardinalDirectionsEnum.North && this.yCord !== this.plateau.width){
+        if(this.cardinalDirection === CardinalDirectionsEnum.North && this.yCord !== this.plateau.height){
             this.yCord++;
         }
         else if(this.cardinalDirection === CardinalDirectionsEnum.South && this.yCord !== 1){
             this.yCord--;
         }
-        else if(this.cardinalDirection === CardinalDirectionsEnum.East && this.xCord !== this.plateau.height){
+        else if(this.cardinalDirection === CardinalDirectionsEnum.East && this.xCord !== this.plateau.width){
             this.xCord++;
         }
         else if(this.cardinalDirection === CardinalDirectionsEnum.West && this.xCord !== 1){
