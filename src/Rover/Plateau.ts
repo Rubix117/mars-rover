@@ -1,4 +1,4 @@
 export type Plateau = {
-    x: number;
-    y: number;
+    maxWidth: number;
+    maxHeight: number;
 }
