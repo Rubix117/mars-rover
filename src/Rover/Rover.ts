@@ -1,15 +1,17 @@
 import RoverVector from "./RoverVector";
 import {CardinalDirections} from "./CardinalDIrections";
+import {Plateau} from "./Plateau";
 
 class Rover{
     private x: number;
     private y: number;
     private cardinalDirection: number;
-
-    constructor() {
+    private plateau: Plateau;
+    constructor(plateau: Plateau) {
         this.x = 1;
         this.y = 1;
         this.cardinalDirection = 0;
+        this.plateau = plateau;
     }
 
     getRoverVector(): RoverVector{
