@@ -10,7 +10,7 @@ Run `npm build`
 
 Run `npm start`
 
-##TESTING
+## TESTING
 
 To run all the unit tests run `npm run test`
 
