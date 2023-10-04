@@ -1,6 +1,5 @@
-export default interface RoverVector {
+export type RoverVector = {
     x: number;
     y: number;
     cardinalDirection: string;
-
 }

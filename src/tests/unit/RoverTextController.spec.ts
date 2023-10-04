@@ -1,8 +1,8 @@
-import RoverTextController from "../../Rover/RoverTextController";
-import RoverInterface from '../../Rover/RoverInterface';
+import RoverCommander from "../../MarsRover/RoverCommander";
+import RoverInterface from '../../MarsRover/RoverInterface';
 
 describe('Test the rover controller', () => {
-        let roverController: RoverTextController;
+        let roverController: RoverCommander;
         let mockRover: RoverInterface = {
             turnLeft: jest.fn(() => {}),
             turnRight: jest.fn(() => {}),
@@ -16,7 +16,7 @@ describe('Test the rover controller', () => {
             jest.spyOn(mockRover, 'turnLeft');
             jest.spyOn(mockRover, 'turnRight');
             jest.spyOn(mockRover, 'moveForward');
-           roverController = new RoverTextController(mockRover)
+           roverController = new RoverCommander(mockRover)
         });
         afterEach(() =>{
             jest.resetAllMocks();

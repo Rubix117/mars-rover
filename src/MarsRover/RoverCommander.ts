@@ -1,7 +1,7 @@
 import RoverInterface from './RoverInterface';
-import RoverControllerInterface from './RoverControllerInterface';
+import RoverCommanderInterface from './RoverCommanderInterface';
 
-class RoverTextController implements RoverControllerInterface{
+class RoverCommander implements RoverCommanderInterface{
 
     private rover;
     constructor(rover: RoverInterface) {
@@ -26,4 +26,4 @@ class RoverTextController implements RoverControllerInterface{
     }
 }
 
-export default RoverTextController;
+export default RoverCommander;

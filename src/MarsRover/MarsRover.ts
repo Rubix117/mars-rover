@@ -1,5 +1,5 @@
-import RoverVector from "./RoverVector";
-import {CardinalDirectionsEnum} from "./CardinalDirectionsEnum";
+import {RoverVector} from "./@types";
+import {CardinalDirectionsEnum} from "./Enums/CardinalDirectionsEnum";
 import Plateau from "./Plateau";
 import RoverInterface from './RoverInterface';
 
