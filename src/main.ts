@@ -8,7 +8,7 @@ const readline = require('readline').createInterface({
 });
 
 console.log('Welcome to Mars Rover');
-controlRover()
+getUserInput()
     .then(result => {
         console.log(result.x, result.y, result.cardinalDirection);
     })
@@ -18,7 +18,7 @@ controlRover()
     })
 
 
-async function controlRover():Promise<RoverVector>{
+async function getUserInput():Promise<RoverVector>{
     const plateauSize =  await asyncReadline('How big is the plateau?');
     const roverInstructions = await asyncReadline('What are the instructions for the rover?');
     let splitPlateauString = plateauSize.split('x');
