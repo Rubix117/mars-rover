@@ -32,7 +32,7 @@ class Rover{
         if(this.cardinalDirection === CardinalDirections.North){
             this.y++;
         }
-        else if(this.cardinalDirection === CardinalDirections.South){
+        else if(this.cardinalDirection === CardinalDirections.South && this.y !== 1){
             this.y--;
         }
         else if(this.cardinalDirection === CardinalDirections.East){

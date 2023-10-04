@@ -76,6 +76,13 @@ describe('Rover tests', () => {
             testRover.moveForward();
             expect(testRover.getRoverVector()).toEqual({x: 2, y: 1, cardinalDirection: "East"});
         });
+
+        it('Turn to face south then move forward ending at 1,1 south', () => {
+            testRover.turnRight();
+            testRover.turnRight();
+            testRover.moveForward();
+            expect(testRover.getRoverVector()).toEqual({x: 1, y: 1, cardinalDirection: "South"});
+        })
     });
 
 });
