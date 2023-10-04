@@ -1,8 +1,8 @@
 import process from 'process';
-import Plateau from './Rover/Plateau';
-import MarsRover from './Rover/MarsRover';
-import RoverTextController from './Rover/RoverTextController';
-import RoverVector from './Rover/RoverVector';
+import Plateau from './MarsRover/Plateau';
+import MarsRover from './MarsRover/MarsRover';
+import RoverTextController from './MarsRover/RoverCommander';
+import {RoverVector} from './MarsRover/@types';
 
 
 export default class InputHandler{

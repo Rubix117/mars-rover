@@ -1,4 +1,4 @@
-import RoverVector from './@types';
+import {RoverVector} from './@types';
 
 export default interface RoverInterface{
     getRoverVector(): RoverVector
