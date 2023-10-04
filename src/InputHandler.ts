@@ -7,7 +7,7 @@ import {RoverVector} from './MarsRover/@types';
 
 export default class InputHandler{
 
-    static async getUserInput():Promise<RoverVector>{
+    static async moveRobotWithUserInput():Promise<RoverVector>{
         const plateauSize =  await this.asyncReadline('How big is the plateau?');
         const splitPlateauString = plateauSize.split('x');
 
@@ -19,6 +19,7 @@ export default class InputHandler{
         roverController.moveRover(roverInstructions);
         return marsRover.getRoverVector();
     }
+
     private static asyncReadline(question: string): Promise<string> {
         const readline = require('readline').createInterface({
             input: process.stdin,
