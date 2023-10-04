@@ -1,5 +1,5 @@
-import RoverTextController from "./RoverTextController";
-import RoverInterface from './RoverInterface';
+import RoverTextController from "../../Rover/RoverTextController";
+import RoverInterface from '../../Rover/RoverInterface';
 
 describe('Test the rover controller', () => {
         let roverController: RoverTextController;

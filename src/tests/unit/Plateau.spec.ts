@@ -1,4 +1,4 @@
-import Plateau from './Plateau';
+import Plateau from '../../Rover/Plateau';
 
 describe('Test Plateau', () => {
     it('Initialise and get values', () => {

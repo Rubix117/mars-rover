@@ -1,5 +1,5 @@
-import MarsRover from "./MarsRover";
-import Plateau from '../Plateau/Plateau';
+import MarsRover from "../../Rover/MarsRover";
+import Plateau from '../../Rover/Plateau';
 
 describe('Rover tests', () => {
     describe('Rover turning', () => {

@@ -1,4 +1,4 @@
-import InputHandler from './InputHandler/InputHandler';
+import InputHandler from './InputHandler';
 
 
 console.log('Welcome to Mars Rover');

@@ -1,6 +1,6 @@
 import RoverVector from "./RoverVector";
 import {CardinalDirectionsEnum} from "./CardinalDirectionsEnum";
-import Plateau from "../Plateau/Plateau";
+import Plateau from "./Plateau";
 import RoverInterface from './RoverInterface';
 
 class MarsRover implements RoverInterface{
