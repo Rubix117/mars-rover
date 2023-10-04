@@ -15,6 +15,12 @@ class Rover{
     getRoverVector(): RoverVector{
         return {x: this.x, y: this.y, cardinalDirection: CardinalDirections[this.cardinalDirection]}
     }
+
+    turnLeft(){
+        // As % is a remainder operator not a modulo operator we have to add the total first otherwise
+        // you get can get a negative number being returned
+        this.cardinalDirection = (((this.cardinalDirection - 1) + 4) % 4);
+    }
 }
 
 export default Rover;
