@@ -1,4 +1,3 @@
-import { CardinalDirections } from "./CardinalDIrections";
 import Rover from "./Rover";
 
 describe('Rover tests', () => {
