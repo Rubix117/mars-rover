@@ -15,25 +15,25 @@ describe('Rover test', () => {
         expect(roverVector).toEqual({x: 1, y: 1, cardinalDirection: "North"})
     });
 
-    it('Turn Rover left once from starting vector', () => {
+    it('Turn Rover left once from starting vector and end facing west', () => {
         testRover.turnLeft();
         const roverVector = testRover.getRoverVector();
         expect(roverVector).toEqual({x: 1, y: 1, cardinalDirection: "West"})
     });
 
-    it('Turn Rover left Twice from starting vector', () => {
+    it('Turn Rover left Twice from starting vector and end facing south', () => {
         testRover.turnLeft();
         testRover.turnLeft();
         const roverVector = testRover.getRoverVector();
         expect(roverVector).toEqual({x: 1, y: 1, cardinalDirection: "South"})
     });
 
-    it('Turn Rover Right from starting vector', () => {
+    it('Turn Rover Right from starting vector and end facing East', () => {
         testRover.turnRight();
         expect(testRover.getRoverVector()).toEqual({x: 1, y: 1, cardinalDirection: "East"})
     });
 
-    it('Turn Rover Right twice from starting vector', () => {
+    it('Turn Rover Right twice from starting vector and end face South', () => {
         testRover.turnRight();
         testRover.turnRight();
         expect(testRover.getRoverVector()).toEqual({x: 1, y: 1, cardinalDirection: "South"})
