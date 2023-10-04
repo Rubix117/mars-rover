@@ -21,6 +21,10 @@ class Rover{
         // the total number of directions first to prevent this: (0 - 1) % 4 = -1 not the 3 we expect.
         this.cardinalDirection = (((this.cardinalDirection - 1) + 4) % 4);
     }
+
+    turnRight() {
+        this.cardinalDirection = (this.cardinalDirection + 1) % 4;
+    }
 }
 
 export default Rover;
