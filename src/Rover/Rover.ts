@@ -27,6 +27,21 @@ class Rover{
     turnRight() {
         this.cardinalDirection = (this.cardinalDirection + 1) % 4;
     }
+
+    moveForward(){
+        if(this.cardinalDirection === CardinalDirections.North){
+            this.y++;
+        }
+        else if(this.cardinalDirection === CardinalDirections.South){
+            this.y--;
+        }
+        else if(this.cardinalDirection === CardinalDirections.East){
+            this.x++;
+        }
+        else if(this.cardinalDirection === CardinalDirections.West){
+            this.x--;
+        }
+    }
 }
 
 export default Rover;

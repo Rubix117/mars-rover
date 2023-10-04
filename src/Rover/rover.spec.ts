@@ -51,7 +51,31 @@ describe('Rover tests', () => {
             testRover.turnRight();
             testRover.turnLeft();
 
-            expect(testRover.getRoverVector()).toEqual({x: 1, y: 1, cardinalDirection: "South"})
+            expect(testRover.getRoverVector()).toEqual({x: 1, y: 1, cardinalDirection: "South"});
         });
     });
+
+    describe('Moving the rover', () => {
+        let testRover: Rover;
+        beforeEach(() => {
+            testRover = new Rover({x: 10, y: 10});
+        })
+        it('Move the rover forward from the starting location', () => {
+            testRover.moveForward();
+            expect(testRover.getRoverVector()).toEqual({x: 1, y: 2, cardinalDirection: "North"});
+        });
+
+        it('Move the rover forward twice ending at 1,3 facing North', () => {
+            testRover.moveForward();
+            testRover.moveForward();
+            expect(testRover.getRoverVector()).toEqual({x: 1, y: 3, cardinalDirection: "North"});
+        });
+
+        it('Turn right and move forward facing east and at (2,1)', () => {
+            testRover.turnRight();
+            testRover.moveForward();
+            expect(testRover.getRoverVector()).toEqual({x: 2, y: 1, cardinalDirection: "East"});
+        });
+    });
+
 });
