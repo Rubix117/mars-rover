@@ -9,7 +9,7 @@ export default class InputHandler{
 
     static async getUserInput():Promise<RoverVector>{
         const plateauSize =  await this.asyncReadline('How big is the plateau?');
-        let splitPlateauString = plateauSize.split('x');
+        const splitPlateauString = plateauSize.split('x');
         const marsPlateau = new Plateau(parseInt(splitPlateauString[0]),parseInt(splitPlateauString[1]));
         const marsRover = new MarsRover(marsPlateau);
 
