@@ -8,7 +8,7 @@ describe('Test the rover controller', () => {
             jest.spyOn(Rover.prototype, 'turnLeft');
             jest.spyOn(Rover.prototype, 'turnRight');
             jest.spyOn(Rover.prototype, 'moveForward');
-            testRover = new Rover({maxWidth: 5, maxHeight: 5});
+            testRover = new Rover({width: 5, height: 5});
            roverController = new RoverTextController(testRover)
         });
         afterEach(() =>{

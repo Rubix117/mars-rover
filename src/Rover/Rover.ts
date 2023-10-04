@@ -29,13 +29,13 @@ class Rover{
     }
 
     moveForward(){
-        if(this.cardinalDirection === CardinalDirectionsEnum.North && this.y !== this.plateau.maxHeight){
+        if(this.cardinalDirection === CardinalDirectionsEnum.North && this.y !== this.plateau.height){
             this.y++;
         }
         else if(this.cardinalDirection === CardinalDirectionsEnum.South && this.y !== 1){
             this.y--;
         }
-        else if(this.cardinalDirection === CardinalDirectionsEnum.East && this.x !== this.plateau.maxWidth){
+        else if(this.cardinalDirection === CardinalDirectionsEnum.East && this.x !== this.plateau.width){
             this.x++;
         }
         else if(this.cardinalDirection === CardinalDirectionsEnum.West && this.x !== 1){

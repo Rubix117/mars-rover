@@ -22,7 +22,7 @@ async function getUserInput():Promise<RoverVector>{
     const plateauSize =  await asyncReadline('How big is the plateau?');
     const roverInstructions = await asyncReadline('What are the instructions for the rover?');
     let splitPlateauString = plateauSize.split('x');
-    const marsRover = new Rover({maxWidth: parseInt(splitPlateauString[0]) , maxHeight: parseInt(splitPlateauString[1])});
+    const marsRover = new Rover({width: parseInt(splitPlateauString[0]) , height: parseInt(splitPlateauString[1])});
     const roverController = new RoverTextController(marsRover);
     roverController.moveRoverByInput(roverInstructions);
     return marsRover.getRoverVector();
