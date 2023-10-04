@@ -4,16 +4,16 @@ import {CardinalDirections} from "./CardinalDIrections";
 class Rover{
     private x: number;
     private y: number;
-    private cardinalDirection: CardinalDirections;
+    private cardinalDirection: number;
 
     constructor() {
         this.x = 1;
         this.y = 1;
-        this.cardinalDirection = CardinalDirections.NORTH;
+        this.cardinalDirection = 0;
     }
 
     getRoverVector(): RoverVector{
-        return {x: this.x, y: this.y, cardinalDirection: this.cardinalDirection}
+        return {x: this.x, y: this.y, cardinalDirection: CardinalDirections[this.cardinalDirection]}
     }
 }
 
