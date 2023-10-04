@@ -1,3 +1,3 @@
-interface RoverControllerInterface{
+export default interface RoverControllerInterface{
     moveRover(controlInput: string): void;
 }

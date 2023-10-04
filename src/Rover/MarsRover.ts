@@ -1,6 +1,6 @@
 import RoverVector from "./RoverVector";
 import {CardinalDirectionsEnum} from "./CardinalDirectionsEnum";
-import {Plateau} from "./Plateau";
+import Plateau from "../Plateau/Plateau";
 import RoverInterface from './RoverInterface';
 
 class MarsRover implements RoverInterface{
@@ -30,13 +30,13 @@ class MarsRover implements RoverInterface{
     }
 
     moveForward(){
-        if(this.cardinalDirection === CardinalDirectionsEnum.North && this.yCord !== this.plateau.height){
+        if(this.cardinalDirection === CardinalDirectionsEnum.North && this.yCord !== this.plateau.width){
             this.yCord++;
         }
         else if(this.cardinalDirection === CardinalDirectionsEnum.South && this.yCord !== 1){
             this.yCord--;
         }
-        else if(this.cardinalDirection === CardinalDirectionsEnum.East && this.xCord !== this.plateau.width){
+        else if(this.cardinalDirection === CardinalDirectionsEnum.East && this.xCord !== this.plateau.height){
             this.xCord++;
         }
         else if(this.cardinalDirection === CardinalDirectionsEnum.West && this.xCord !== 1){

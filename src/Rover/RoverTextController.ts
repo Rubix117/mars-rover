@@ -1,4 +1,5 @@
 import RoverInterface from './RoverInterface';
+import RoverControllerInterface from './RoverControllerInterface';
 
 class RoverTextController implements RoverControllerInterface{
 

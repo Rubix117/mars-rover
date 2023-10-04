@@ -1,10 +1,11 @@
 import MarsRover from "./MarsRover";
+import Plateau from '../Plateau/Plateau';
 
 describe('Rover tests', () => {
     describe('Rover turning', () => {
         let testRover: MarsRover;
         beforeEach(() => {
-            testRover = new MarsRover({width: 10, height: 10});
+            testRover = new MarsRover(new Plateau(10, 10));
         })
         it('Initialise rover', () => {
             expect(testRover).toBeInstanceOf(MarsRover);
@@ -58,7 +59,7 @@ describe('Rover tests', () => {
     describe('Moving the rover', () => {
         let testRover: MarsRover;
         beforeEach(() => {
-            testRover = new MarsRover({width: 10, height: 10});
+            testRover = new MarsRover(new Plateau(10, 10));
         })
         it('Move the rover forward from the starting location', () => {
             testRover.moveForward();
@@ -108,7 +109,7 @@ describe('Rover tests', () => {
 
     describe('Moving and turing tests', () => {
         it('On a 5x5 plateau move FFRFLFLF ending at 1,4,West', () => {
-            const testRover = new MarsRover({width: 5, height: 5});
+            const testRover = new MarsRover(new Plateau(5, 5));
             testRover.moveForward();
             testRover.moveForward();
             testRover.turnRight();
@@ -120,7 +121,7 @@ describe('Rover tests', () => {
             expect(testRover.getRoverVector()).toEqual({x: 1, y: 4, cardinalDirection: 'West'})
         });
         it(`On a 6x6 plateay move FFFFFFRFFFFFF ending at 6,6, West`, () => {
-            const testRover = new MarsRover({width: 6, height: 6});
+            const testRover = new MarsRover(new Plateau(6, 6));
             for(let i = 0; i < 6; i++){
                 testRover.moveForward();
             }
